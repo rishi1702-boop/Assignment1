@@ -41,4 +41,10 @@ module.exports = {
     validatePriority,
     validateDueDate
 };
+module.exports = { validateTitle, validatePriority, validateDueDate };
+// Export these validation functions
+// 1. Validate task title (not empty, min 3 chars)
+// 2. Validate priority (must be: low, medium, high)
+// 3. Validate due date (must be future date)
+
 

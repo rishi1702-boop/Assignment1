@@ -25,6 +25,7 @@
 */
 // Import validator functions
 const { validateTitle, validatePriority, validateDueDate } = require('./validator');
+
 const tasks = [];
 // 1. Add new task
 function addTask(title, priority, dueDate) {
@@ -64,8 +65,4 @@ function completeTask(taskId) {
     }
 }
 // Export functions
-module.exports = {
-    addTask,
-    getAllTasks,
-    completeTask
-};
+module.exports = { addTask, getAllTasks, completeTask };
