@@ -1,0 +1,56 @@
+
+
+###
+GET http://localhost:4000/user-api/users
+###create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"rishi",
+    "password":"rishi345",
+    "age":21
+}
+
+###update user
+PUT  http://localhost:4000/user-api/users/697dbad1c43478b3bf2416d4
+Content-Type: application/json
+
+{
+    "username":"akhil",
+    "password":"ttttttt",
+    "age":23
+}
+
+###delete
+DELETE http://localhost:4000/user-api/users/697dc7889dcf0b3d84fb21e8
+
+
+###
+GET http://localhost:4000/product-api/products
+
+###
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productname":"mobile",
+    "pid":234,
+    "price":10000
+}
+
+###
+GET http://localhost:4000/product-api/products/697f9098cfb737fdebd7754d
+
+###
+PUT http://localhost:4000/product-api/products/697f9098cfb737fdebd7754d
+Content-Type: application/json
+
+{
+    "productname":"laptop",
+    "pid":235,
+    "price":50000
+}
+
+###
+DELETE http://localhost:4000/product-api/products/697f9098cfb737fdebd7754d
