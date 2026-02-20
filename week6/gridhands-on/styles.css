@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.parent{
+    width: 800px;
+    height: 700px;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    /*make parent grid container*/
+    display: grid;
+    /*decide no of rows & colum*/
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+}
+.card{
+    margin: 10px;
+    text-align: center;
+}
+.child1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: left;
+    display: flex;
+    justify-content:left;
+}
+.child1 img{
+    height: 100%;
+}
+.child2{
+    padding: 30px;
+    grid-column: 3/5;
+    grid-row: 1/2;
+    background-color: rgb(195, 186, 186);
+}
+h1{
+    padding: 10px;
+}
+.child3{
+    background-color: orange;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+}
+.child3 img{
+    width: 200px;
+}
+.child4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+}
+.child4 img{
+    width: 70%;
+}
+.child4 h4{
+    color: grey;
+}
+.child4 h2{
+    padding: 10px;
+}
+.child5{
+    padding: 20px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: left;
+    
+}
+.child5 p{
+    font-size: 0.85rem;
+    color: grey;
+    text-align: left;
+}
+.child5 h4{
+    padding: 10px;
+    text-align: left;
+    color: rgb(63, 156, 238);
+}
+.child6{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: center;
+}
+.child6 img{
+    width: 80%;
+}
+.child6 h5{
+    margin-top: 10px;
+    color: skyblue;
+}
+.child7{
+    background-color: rgb(60, 149, 165);
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+.child7 h6{
+    width: fit-content;
+    color: black;
+    background-color: orange;
+    border-radius: 5px;
+    text-align: left;
+}
+.child7 img{
+    width: 40%;
+}
+.child7 h1{
+    color: white;
+}
+.child8{
+    background-color: rgb(165, 47, 219);
+    grid-column: 4/5;
+    grid-row: 2/4;
+}
+.child8 img{
+    max-width: 70%;
+    margin: 30px;
+    background-color: rgb(157, 30, 216);
+    border-radius: 20px;
+}
+.child8 h2{
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+.child8 p{
+    font: 0.9rem sans-serif;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+.child8 h5{
+    width: fit-content;
+    color: black;
+    background-color: yellow;
+    margin-left: 40px;
+    text-align: center;
+
+}
+
+
+/* ------------------------------------------
+   RESPONSIVE FLEX + MEDIA QUERIES (ADDED)
+-------------------------------------------*/
+
+@media (max-width: 900px) {
+
+    .parent{
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .child1{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .child1 img{
+        width: 80%;
+        height: auto;
+    }
+
+    .child3 img{
+        width: 150px;
+    }
+
+    .child4 img{
+        width: 60%;
+    }
+
+    .child7{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .child7 img{
+        width: 60%;
+    }
+
+    .child8{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .child8 img{
+        max-width: 60%;
+    }
+}
+
+/* --- Mobile Layout (Fully Stacked) --- */
+@media (max-width: 600px) {
+
+    .parent{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .child1,
+    .child2,
+    .child3,
+    .child4,
+    .child5,
+    .child6,
+    .child7,
+    .child8 {
+        grid-column: 1/2 !important;
+        grid-row: auto !important;
+        width: 100%;
+    }
+
+    .child7 img,
+    .child6 img,
+    .child4 img {
+        width: 70%;
+    }
+
+    .child1{
+        flex-direction: column;
+        align-items: center;
+    }
+}
